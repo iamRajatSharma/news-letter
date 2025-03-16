@@ -1,7 +1,7 @@
 const express = require("express");
 const cron = require("node-cron");
 require("dotenv").config();
-const db = require("./database");
+const db = require("./config/database");
 const app = express();
 const router = require("./routes/Subscribe")
 db
