@@ -14,6 +14,7 @@ const subscribe = async (req, res) => {
         const subject = "Thanks for subscribe us"
         const body = "This is body"
         await sendConfirmationMail(subject, body, email);  // send confirmation mail
+        //for now sending mail directly, later we use rabbitmq for sending mail through queue
 
         res.status(201).json({ message: "Subscription successful" });
     } catch (error) {
